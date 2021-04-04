@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tanmay Joshi</title>
+    <style>
+        *{ box-sizing:border-box;}
+
+        body{
+            background-image: url('bg.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .nav {
+            background-color: darkslategrey;
+            position:sticky;
+            overflow:hidden;
+            position: -webkit-sticky;
+            top:0;
+        }
+
+        .nav a{
+            color: rgba(0, 209, 146, 0.747);
+            float:left;
+            display:block; 
+            padding: 20px;
+        }
+
+        .nav a:hover{
+            color:floralwhite;
+            background-color: black;
+        }
+
+        .contact a{
+            color:lightblue;
+        }
+
+        .contact a:hover{
+            color:lightgoldenrodyellow;
+        }
+
+        .button {
+            border: none;
+            color:tomato;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: navajowhite;
+        }
+
+    </style>
+
+    <script>
+        function AgeCalcInDays(){
+            let BirthYear = prompt("Enter Birth Year");
+            let CurrentYear = prompt("Enter Current Year");
+            let BirthMonth = prompt("Enter Birth Month in numbers");
+            let CurrentMonth = prompt("Enter current month in numbers");
+            
+            let Age=(365*(CurrentYear-BirthYear)) + (30*(CurrentMonth-BirthMonth)) -5;
+            if (CurrentYear>BirthYear) alert(`You are ${Age} days old`);
+            else alert("Invalid input");
+            }
+        function AgeCalcInMonths(){
+            let BirthYear = prompt("Enter Birth Year");
+            let CurrentYear = prompt("Enter Current Year");
+            let BirthMonth = prompt("Enter Birth Month in numbers");
+            let CurrentMonth = prompt("Enter current month in numbers");
+            let nmonths = ((CurrentYear-BirthYear)*12) + (CurrentMonth-BirthMonth);
+            if (nmonths>=0) alert(`You are ${nmonths} Months old`);
+            else alert("Invalid input");
+        }
+        function AgeCalcInYears(){
+            let BirthYear = prompt("Enter Birth Year");
+            let CurrentYear = prompt("Enter Current Year");
+            if (CurrentYear>BirthYear) alert(`You are ${CurrentYear-BirthYear} years old`);
+            else alert("Invalid input");
+        }
+    </script>
+        
+</head>
+
+<body style="font-family: cursive; margin: 10px 10px 10px 10px;background-color:slategrey ; " >
+    <div  style="padding: 50px; background-color: lavender; color:darkviolet; text-align: center; " >
+        <h1 style="font-size: 30px;"> Hi there ! Welcome to my webpage !</h1>
+        <p style="font-size: 40px;">  I'm Tanmay Joshi</p>   
+    </div>
+
+    <div class="nav">
+        <ul style="list-style-type:none ;display:block">
+            <li> <a href="C:\Users\tanma\OneDrive\Desktop\My_website\main_website.html">Home</a></li>
+            <li> <a href="#calc">Age calculator</a></li>
+            <li> <a href="#jump">Contact me</a></li>
+        </ul>
+    </div>
+
+    <section style=" color:cornsilk;text-align: center;">
+        <h1 style="font-size: 35px;">  A little about me: </h1>
+        <ol style="list-style-type:lower-roman;text-align: left;font-size: 25px;">
+            <li>I'm Tanmay Joshi, First year student in Electrical Engineering department, IIT Bombay.</li>
+            <li>I'm from Mumbai, Maharashtra.</li>
+            <li>My hobbies include reading fiction and history, playing chess and origami.</li>
+            <li>Besides this, I also am a cricket enthusiast.</li>
+        </ol>
+        <br><br><br>
+    </section>
+
+    <section style="color:tan;text-align:center;">
+        <h1 style="font-size: 35px;"> Here's me</h1>
+        <p style="text-align: center;"> <br>
+            <img src="image.jpg" alt="My picture" width="600" height="800">
+        </p>
+        <br><br><br>
+    </section>
+
+    <section style=" color:tan; text-align: center;">
+        <h1 style="font-size: 35px;"> Courses I've completed:</h1>
+        <ul style="text-align: left; font-size: 25px;">
+            <li>MA109- Calculus1</li>
+            <li>MA111- Calculus2</li>
+            <li>PH107- Quantum Physics</li>
+            <li>CS101- Introduction to Programming</li>
+            <li>CH107- Physical Chemistry</li>
+            <li>CH105- Organic and Inorganic Chemistry</li>
+            <li>EE113- Introduction to Electrical Engineering</li>
+        </ul>
+        <br><br><br>   
+    </section>
+
+    <section style=" color:tan; text-align: left;" id="calc">
+        <h1 style="font-size: 35px;text-align: center;"> Age Calculator</h1>
+        <button class="button" onclick="AgeCalcInDays()">Age in Days</button>
+        <br>
+        <button class="button" onclick="AgeCalcInMonths()">Age in Months</button>
+        <br>
+        <button class="button" onclick="AgeCalcInYears()"> Age in Years</button>
+    </section>
+
+
+    <section class="contact" style="color:darkturquoise;text-align: center;font-size: 30px;" id="jump">
+       <h1 style="font-size: 40px;">Connect with me</h1>
+       <dl style="text-align: left;">
+           <dt style="font-size: 30px;">Phone/Whatsapp :</dt>
+           <dd > +91 7738727210</dd>
+           <dt style="font-size: 30px;">Email :</dt>
+           <dd> 
+               <a href="mailto:tanmay.30.joshi@gmail.com">Personal</a>
+               <br>
+               <a href="mailto:200070027@iitb.ac.in">College</a>
+           </dd>
+       </dl>
+    </section>
+
+    
+</body> 
+</html> 
